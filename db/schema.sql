@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS passport_demo;
+DROP DATABASE IF EXISTS food_diary_db;
 -- Create the DB
-CREATE DATABASE passport_demo;
+CREATE DATABASE food_diary_db;
