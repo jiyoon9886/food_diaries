@@ -1,3 +1,7 @@
+// Requiring dotenv
+require('dotenv').config();
+console.log(process.env.DB_PASSWORD);
+
 // Requiring necessary npm packages
 var express = require("express");
 var session = require("express-session");
@@ -12,7 +16,7 @@ var db = require("./models");
 var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 // Passport middleware needed to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
