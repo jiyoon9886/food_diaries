@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Upload images to server using Node JS</title>
-    <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/jquery.form.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload New Entry</title>
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+    />
   </head>
   <body>
-    <form
-      id="frmUploader"
-      enctype="multipart/form-data"
-      action="api/Upload/"
-      method="post"
-    >
-      <input type="file" name="imgUploader" multiple />
-      <input type="submit" name="submit" id="btnSubmit" value="Upload" />
-    </form>
-    <script></script>
+    <div class="file">
+      <label class="file-label">
+        <input class="file-input" type="file" name="resume" />
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose a file…
+          </span>
+        </span>
+      </label>
+    </div>
   </body>
 </html>
