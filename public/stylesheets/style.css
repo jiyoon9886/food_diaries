@@ -2,3 +2,10 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+.card .card-image .image img {
+  width: 350px;
+}
+.navbar-brand .navbar-item img{
+  width: 80px;
+  height: 80px;
+}
