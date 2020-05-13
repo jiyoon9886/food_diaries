@@ -2,6 +2,7 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
 .card .card-image .image img {
   height: 450px;
   width: 630px;
@@ -9,6 +10,7 @@ form.login {
 .navbar-brand .navbar-item img{
   width: 80px;
   height: 80px;
+<<<<<<< HEAD
 }
 
 input {
@@ -36,3 +38,10 @@ input {
   cursor: pointer;
   height: auto;
 }
+=======
+
+.logo {
+text-align: center;
+
+
+>>>>>>> 47f9f6d4865993b889bfb6a3a615fc0b7c462a72
