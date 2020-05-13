@@ -11,7 +11,7 @@ form.login {
   height: 80px;
 }
 
-.logo {
+.logo.is-centered {
 text-align: center;
 
 }
