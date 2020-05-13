@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  var nameOfFood = $();
+  // Reference to our form and inputs
+  var nameOfFood = $("#foodName");
+  var foodNotes = $("#foodNotes");
 });
