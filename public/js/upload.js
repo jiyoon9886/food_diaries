@@ -3,6 +3,7 @@ $(document).ready(function() {
   var uploadForm = $("#uploadFood");
   var nameOfFood = $("#foodName");
   var foodNotes = $("#foodNotes");
+  var resturantName = $("#resturantName");
 
   // Submit button event check to make sure both fields are filled
   uploadForm.on("submit", function(event) {
