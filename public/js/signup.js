@@ -1,7 +1,6 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
-  //var nameInput = $("input#name-input");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
@@ -9,17 +8,15 @@ $(document).ready(function() {
   signUpForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
-      //name: nameInput.val().trim(), 
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
     };
 
     if (!userData.email || !userData.password) {
       return;
     }
-    // If we have a name, email, and password, run the signUpUser function
+    // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
-    //nameInput.val("");
     emailInput.val("");
     passwordInput.val("");
   });
@@ -29,7 +26,7 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password,
     })
       .then(function(data) {
         window.location.replace("/members");
