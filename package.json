@@ -1,7 +1,7 @@
 {
-  "name": "node_js_file_upload",
+  "name": "food-diaries",
   "version": "0.0.1",
-  "description": "Node_JS_File_Upload",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
@@ -11,9 +11,7 @@
     "watch": "nodemon server.js"
   },
   "keywords": [],
-  "author": {
-    "name": "Sibeesh"
-  },
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "2.4.3",
