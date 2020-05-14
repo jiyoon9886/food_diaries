@@ -12,56 +12,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="stylesheets/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
   </head>
   <body>
     <div class="logo">
-      <p>
-          <img
-            border="0"
-            alt="logo image"
-            src="logo/FOODDIARY LOGO.png"
-            width="200"
-            height="200"
-          />
-        </a>
-      </p>
     </div>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Login Form</h2>
+    <section class="hero is-danger">
+      <div class="hero-body">
+        <div class="container-is-center">
+          <p>
+          <img
+          border="0"
+          alt="logo image"
+          src="logo/FOODDIARY LOGO.png"
+          width="200"
+          height="200"
+        />
+      </a>
+    </p>
+         
+    </section>
+        <div class="hero-body">
+          <div class="container has-text-centered">
+    <h1 class="title">
+      Sign In Form
+    </h1>
+  </div>
+</div>
+</div>
           <form class="login">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email-input"
-                placeholder="Email"
-              />
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password-input"
-                placeholder="Password"
-              />
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
             </div>
-            <button type="submit" class="btn btn-default">Login</button>
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <a class="button is-danger">
+                  Login
+                </a>
+              </p>
+              <p class="control">
+                <a  href="signup.html" class="button is-light">
+            Sign Up
+                </a>
+              </p>
+            </div>
           </form>
           <br />
-          <p>Or sign up <a href="signup.html">here</a></p>
         </div>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
   </body>
