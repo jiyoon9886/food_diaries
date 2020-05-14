@@ -3,7 +3,7 @@ $(document).ready(function() {
   var uploadForm = $("#uploadFood");
   var nameOfFood = $("#foodName");
   var foodNotes = $("#foodNotes");
-  var resturantName = $("#resturantName");
+  var resturantNames = $("#resturantName");
 
   // Submit button event check to make sure both fields are filled
   uploadForm.on("submit", function(event) {
@@ -12,21 +12,24 @@ $(document).ready(function() {
     var userData = {
       foodName: nameOfFood.val().trim(),
       foodNote: foodNotes.val().trim(),
+      resturantName: resturantNames.val().trim(),
     };
 
-    if (!userData.foodName || !userData.foodNote) {
+    if (!userData.foodName || !userData.foodNote || !userData.resturantName) {
       return;
     }
-    // If we have an email and password, run the signUpUser function
-    foodUploader(userData.foodName, userData.foodNote);
+    // If we have food name, notes and resutant filled run the foodUploader function
+    foodUploader(userData.foodName, userData.foodNote, userData.resturantName);
     nameOfFood.val("");
     foodNotes.val("");
+    resturantNames.val("");
   });
   // function for uploading Entry into Database
-  function foodUploader(foodName, foodNote) {
+  function foodUploader(foodName, foodNote, resturantName) {
     $.post("/api/upload", {
       foodName: foodName,
       foodNote: foodNote,
+      resturantName: resturantName,
     })
       .then(function(data) {
         window.location.replace("/recents");
