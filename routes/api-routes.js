@@ -52,16 +52,23 @@ module.exports = function(app) {
   });
 
   app.get("/api/users", function(req, res) {
-    db.User.findAll().then(users => {
+    db.User.findAll().then((users) => {
       //console.log(users);
       res.send(users);
-    })
-    
-  })
-
+    });
+  });
+  // Route for all data
+  app.get("/api/recents", function(req, res) {
+    db.UsersFood.findAll({}).then(function(userFooddb) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(userFooddb);
+    });
+  });
   // Route for uploading user into the database
   app.post("/api/upload", function(req, res) {
-    db.UsersFoods.create({
+    db.UsersFood.create({
+      // Needs to update to actually passport USER ID in order to display actual user posts
+      UserId: req.user.id,
       foodName: req.body.foodName,
       foodNote: req.body.foodNote,
       resturantName: req.body.resturantName,
@@ -70,6 +77,7 @@ module.exports = function(app) {
         res.redirect(307, "/api/recents");
       })
       .catch(function(err) {
+        console.log(err);
         res.status(401).json(err);
       });
   });
