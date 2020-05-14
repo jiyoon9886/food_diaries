@@ -8,6 +8,7 @@ $(document).ready(function() {
   // Submit button event check to make sure both fields are filled
   uploadForm.on("submit", function(event) {
     event.preventDefault();
+
     //console.log("I am submitting stuffs");
     var UsersFood = {
       foodName: nameOfFood.val().trim(),
