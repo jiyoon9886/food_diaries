@@ -59,4 +59,18 @@ module.exports = function(app) {
     
   })
 
+  // Route for uploading user into the database
+  app.post("/api/upload", function(req, res) {
+    db.UsersFoods.create({
+      foodName: req.body.foodName,
+      foodNote: req.body.foodNote,
+      resturantName: req.body.resturantName,
+    })
+      .then(function() {
+        res.redirect(307, "/api/recents");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
 };

@@ -17,15 +17,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // The food Name cannot be null
-    // foodName: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
-    // foodNote: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
   });
 
   //User.hasMany(Upload);
