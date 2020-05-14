@@ -1,6 +1,6 @@
 // Requiring dotenv
 require("dotenv").config();
-console.log(process.env.DB_PASSWORD);
+//console.log(process.env.DB_PASSWORD);
 
 // Requiring necessary npm packages
 var express = require("express");
