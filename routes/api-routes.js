@@ -51,6 +51,14 @@ module.exports = function(app) {
     }
   });
 
+  app.get("/api/users", function(req, res) {
+    db.User.findAll().then(users => {
+      //console.log(users);
+      res.send(users);
+    })
+    
+  })
+
   // Route for uploading user into the database
   app.post("/api/upload", function(req, res) {
     db.UsersFoods.create({
