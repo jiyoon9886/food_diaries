@@ -8,18 +8,26 @@ $(document).ready(function() {
   // Submit button event check to make sure both fields are filled
   uploadForm.on("submit", function(event) {
     event.preventDefault();
-    //console.log("I am submitting stuffs");
-    var userData = {
+    console.log("I am submitting stuffs");
+    var UsersFood = {
       foodName: nameOfFood.val().trim(),
       foodNote: foodNotes.val().trim(),
-      resturantName: resturantNames.val().trim(),
+      resturantName: resturantNames.val(),
     };
 
-    if (!userData.foodName || !userData.foodNote || !userData.resturantName) {
+    if (
+      !UsersFood.foodName ||
+      !UsersFood.foodNote ||
+      !UsersFood.resturantName
+    ) {
       return;
     }
     // If we have food name, notes and resutant filled run the foodUploader function
-    foodUploader(userData.foodName, userData.foodNote, userData.resturantName);
+    foodUploader(
+      UsersFood.foodName,
+      UsersFood.foodNote,
+      UsersFood.resturantName
+    );
     nameOfFood.val("");
     foodNotes.val("");
     resturantNames.val("");
@@ -35,9 +43,9 @@ $(document).ready(function() {
         window.location.replace("/recents");
       })
       // If there's an error, handle it by throwing up an alert
-      .catch(handleLoginErr);
+      .catch(handleUploadErr);
   }
-  function handleLoginErr(err) {
+  function handleUploadErr(err) {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
